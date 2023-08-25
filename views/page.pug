@@ -1,0 +1,24 @@
+doctype html 
+html(lang="en")
+head
+    meta(charset="UTF_8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title To Do List
+    link(rel="stylesheet", href="./style/style.css")
+body
+
+    header
+        h1  TO DO LIST
+    main 
+            form(action="/add", method="post")
+            ul 
+                each task in tasks 
+                    li 
+                        input.to-do-input(type='checkbox' )
+                        |
+                button.to-do-button(type='submit') Add Task 
+            ul  
+                each item in ListTasks 
+                    li = item
+    
+    
